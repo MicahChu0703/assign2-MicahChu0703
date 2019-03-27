@@ -58,17 +58,17 @@ void draw() {
           groundhogY+=0;
         break;
         case DOWNWARD:
-          groundhogY+=80/15;
+          groundhogY+=80/16;
           groundhog = loadImage("img/groundhogDown.png");
           if(groundhogY%grid==0){movement=STOP;}
         break;
         case LEFTWARD:
-          groundhogX-=80/15;
+          groundhogX-=80/16;
           groundhog = loadImage("img/groundhogLeft.png");
           if(groundhogX%grid==0){movement=STOP;}
         break;
         case RIGHTWARD:
-          groundhogX+=80/15;
+          groundhogX+=80/16;
           groundhog = loadImage("img/groundhogRight.png");
           if(groundhogX%grid==0){movement=STOP;}
         break;
@@ -88,12 +88,12 @@ void draw() {
             fill(253,184,19);
             ellipse(width-50,50,120,120);
         //life
-          //if (lifeAmount>=1){image(life,10,10);}
-          //if (lifeAmount>=2){image(life,10+life.width+20,10);}
-          //if (lifeAmount>=3){image(life,10+(life.width+20)*2,10);}
-          image(life,10+(life.width+20)*(lifeAmount-1),10);
-          image(life,10+(life.width+20)*(lifeAmount-2),10);
-          image(life,10+(life.width+20)*(lifeAmount-3),10);
+          if (lifeAmount>=1){image(life,10,10);}
+          if (lifeAmount>=2){image(life,10+life.width+20,10);}
+          if (lifeAmount>=3){image(life,10+(life.width+20)*2,10);}
+          //image(life,10+(life.width+20)*(lifeAmount-1),10);
+          //image(life,10+(life.width+20)*(lifeAmount-2),10);
+          //image(life,10+(life.width+20)*(lifeAmount-3),10);
         //draw groundhog
           image(groundhog,groundhogX,groundhogY);
         //draw cabbage
