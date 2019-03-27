@@ -58,17 +58,17 @@ void draw() {
           groundhogY+=0;
         break;
         case DOWNWARD:
-          groundhogY+=80/16;
+          groundhogY+=5;
           groundhog = loadImage("img/groundhogDown.png");
           if(groundhogY%grid==0){movement=STOP;}
         break;
         case LEFTWARD:
-          groundhogX-=80/16;
+          groundhogX-=5;
           groundhog = loadImage("img/groundhogLeft.png");
           if(groundhogX%grid==0){movement=STOP;}
         break;
         case RIGHTWARD:
-          groundhogX+=80/16;
+          groundhogX+=5;
           groundhog = loadImage("img/groundhogRight.png");
           if(groundhogX%grid==0){movement=STOP;}
         break;
