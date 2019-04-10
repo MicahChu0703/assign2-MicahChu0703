@@ -133,6 +133,8 @@ void draw() {
          groundhogX=grid*4;groundhogY=grid;
          //lifeAmount
          lifeAmount=2;       
+         //reset soldier X
+         soldierX = -80;
          //set soldierY randomly
          soldierY =grid*2+grid*floor(random(0,4));
          //set cabbage position radomly
